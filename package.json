@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+        "coffee-script": "1.7.x",
+        "colors": "x",
+        "stylus": "x",
+        "nib": "x",
+        "jade": "x",
+        "connect": "x"
+    }
+}
