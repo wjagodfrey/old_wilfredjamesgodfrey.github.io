@@ -1,6 +1,6 @@
 ## Installation
 * `clone`
-* `npm install`
+* `npm install` 
 
 ## Development
 * `cake build`
