@@ -2,12 +2,6 @@ root = @
 
 app = angular.module 'app', ['ngSanitize']
 
-app.controller 'homeNav', [
-  '$scope'
-  (scope) ->
-    console.log scope
-]
-
 app.directive 'wgMainMenu', [
   ->
     restrict: 'AEC'
@@ -16,3 +10,6 @@ app.directive 'wgMainMenu', [
     link: (scope, element, attrs) ->
       scope.menuConfig = root.wgMenuConfig
 ]
+
+
+angular.bootstrap root.document.body, ["app"]

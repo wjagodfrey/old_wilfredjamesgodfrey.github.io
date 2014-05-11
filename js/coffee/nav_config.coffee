@@ -1,20 +1,23 @@
 @wgMenuConfig = [
   {
-    name: 'Hector'
-    url_suffix: 'hector'
-    description: 'A 3Dish, pixelartish head with an attitude'
-    img_src: 'hector.png'
+    name        : 'Hector'
+    url         : 'hector'
+    description : 'A 3Dish pixelart head, and some buttons. What do they do?'
+    hint        : 'Play with the buttons, you\'ll figure it out.'
+    img         : 'hector.png'
   }
   {
-    name: 'Sprite Breaker'
-    url_suffix: 'spriteBreaker'
-    description: 'A tool for splitting spritesheets and injecting them into projects'
-    img_src: 'spriteBreaker.png'
+    name        : 'Sprite Breaker'
+    url         : 'spriteBreaker'
+    description : 'A tool for splitting spritesheets and injecting them into projects.'
+    hint        : 'Click the  "?" button for a quick start guide.'
+    img         : 'spriteBreaker.png'
   }
   {
-    name: 'Sombrero'
-    url_suffix: 'sombrero'
-    description: 'A 2.5D pixel art test'
-    img_src: 'sombrero.png'
+    name        : 'Sombrero'
+    url         : 'sombrero'
+    description : 'A 2.5D pixel art animation test.'
+    hint        : 'Use the arrow keys to move.'
+    img         : 'sombrero.png'
   }
 ]

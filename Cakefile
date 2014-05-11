@@ -23,7 +23,7 @@ task 'build', 'Watch all jade, stylus and coffeescript files and build appropria
     jade --watch *.jade */*.jade  &
     coffee -w -j js/index.js -c #{jsFiles} &
 
-    coffee -w -j js/nav_menu.js -c #{jsPref}nav_config.coffee #{jsPref}nav_menu.coffee &
+    coffee -w -j js/nav.js -c #{jsPref}nav_config.coffee #{jsPref}nav.coffee &
 
     coffee -w -j js/analytics.js -c #{jsPref}analytics.coffee &
 
