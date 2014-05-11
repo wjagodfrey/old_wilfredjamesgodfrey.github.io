@@ -56,8 +56,6 @@
 
   navAppElement = root.document.getElementById('wg-nav-app');
 
-  console.log(navAppElement);
-
   miniNav = document.createElement('div');
 
   miniNav.className = 'wg-mini-menu';
