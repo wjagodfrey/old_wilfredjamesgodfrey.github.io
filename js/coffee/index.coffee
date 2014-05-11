@@ -1,6 +1,6 @@
 root = @
 
-app = angular.module 'app', ['ngSanitize']
+app = angular.module 'bodyApp', ['ngSanitize']
 
 app.directive 'wgMainMenu', [
   ->
@@ -12,4 +12,4 @@ app.directive 'wgMainMenu', [
 ]
 
 
-angular.bootstrap root.document.body, ["app"]
+angular.bootstrap root.document.body, ["bodyApp"]
