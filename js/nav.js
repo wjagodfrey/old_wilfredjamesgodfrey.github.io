@@ -60,10 +60,8 @@
 
   root.document.body.appendChild(miniNav);
 
-  app.run([
-    '$rootElement', function(element) {
-      return console.log(element);
-    }
-  ]);
+  app.run(function() {
+    return console.log(element);
+  });
 
 }).call(this);

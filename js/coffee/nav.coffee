@@ -28,8 +28,5 @@ miniNav = document.createElement 'div'
 miniNav.className = 'wg-mini-menu'
 root.document.body.appendChild miniNav
 
-app.run [
-  '$rootElement'
-  (element) ->
+app.run ->
     console.log element
-]
