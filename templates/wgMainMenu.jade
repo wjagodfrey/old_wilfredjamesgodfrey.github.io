@@ -1,0 +1,5 @@
+.col-sm-3(ng-repeat="item in menuConfig")
+  a(ng-href="./{{item.url_suffix}}").thumbnail
+    img(ng-src="./img/nav/{{item.img_src}}")
+  h4 {{item.name}}
+  div(ng-bind-html="item.description")

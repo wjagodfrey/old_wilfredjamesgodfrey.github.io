@@ -1,6 +1,10 @@
 body {
   margin: 0;
+  padding-bottom: 100px;
 }
 canvas {
   cursor: none;
+}
+.header {
+  margin-bottom: 30px;
 }

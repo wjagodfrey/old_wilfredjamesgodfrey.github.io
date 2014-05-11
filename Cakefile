@@ -11,7 +11,8 @@ port = 8002
 task 'build', 'Watch all jade, stylus and coffeescript files and build appropriately', ->
   jsPref = 'js/coffee/'
   jsFiles = [
-    ""
+    "#{jsPref}nav_config.coffee"
+    "#{jsPref}index.coffee"
   ].join(' ')
 
   console.log '========='.bold.cyan, 'COFFEE FILES'.bold.magenta, '========='.bold.cyan
@@ -19,9 +20,13 @@ task 'build', 'Watch all jade, stylus and coffeescript files and build appropria
   console.log '============'.bold.cyan, 'OUTPUT'.bold.magenta, '============'.bold.cyan, '\n'
 
   questTask = exec "
-    jade --watch *.jade  &
+    jade --watch *.jade */*.jade  &
     coffee -w -j js/index.js -c #{jsFiles} &
+
+    coffee -w -j js/nav_menu.js -c #{jsPref}nav_config.coffee #{jsPref}nav_menu.coffee &
+
     coffee -w -j js/analytics.js -c #{jsPref}analytics.coffee &
+
     stylus -w css/ && fg
   ", (err, stdout, stderr) ->
     throw err if err
@@ -33,6 +38,6 @@ task 'build', 'Watch all jade, stylus and coffeescript files and build appropria
   dev server task
 ###
 
-task 'start', 'Start a simple python HTTP file server', (options) ->
+task 'start', 'Start a simple HTTP file server', (options) ->
   console.log 'Starting dev server on port'.cyan.bold, "#{port}".red
   connect.createServer(connect.static(__dirname)).listen port
