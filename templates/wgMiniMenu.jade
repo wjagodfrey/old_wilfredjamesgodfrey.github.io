@@ -3,7 +3,7 @@
     .button(ng-click="showProjects = !showProjects; showProject = false") <<
     .list(ng-show="showProjects")
       div.list-item(ng-repeat="item in menuConfig")
-        a(ng-href="./{{item.url}}" title="{{item.description}}")
+        a(ng-href="/{{item.url}}" title="{{item.description}}")
           {{item.name}}
   .menu(ng-class="{open:showProject}" ng-if="project")
     .button(ng-click="showProject = !showProject; showProjects = false") {{project.name}}
