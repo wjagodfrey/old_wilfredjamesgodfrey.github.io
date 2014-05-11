@@ -58,8 +58,7 @@
     var miniNav;
     miniNav = document.createElement('div');
     miniNav.className = 'wg-mini-menu';
-    root.document.body.appendChild(miniNav);
-    return angular.bootstrap(root.document, ["navApp"]);
+    return root.document.body.appendChild(miniNav);
   });
 
 }).call(this);

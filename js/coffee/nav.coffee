@@ -27,5 +27,3 @@ setTimeout ->
   miniNav = document.createElement 'div'
   miniNav.className = 'wg-mini-menu'
   root.document.body.appendChild miniNav
-
-  angular.bootstrap root.document, ["navApp"]
