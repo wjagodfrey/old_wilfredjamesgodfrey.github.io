@@ -1,8 +1,6 @@
 root = @
 
-app = angular.module('navApp', []).run ->
-  console.log 'running'
-
+app = angular.module('navApp', [])
 
 app.directive 'wgMiniMenu', [
   ->
@@ -25,9 +23,10 @@ app.directive 'wgMiniMenu', [
       ]
 ]
 
+navAppElement = root.document.getElementById('wg-nav-app')
+
 miniNav = document.createElement 'div'
 miniNav.className = 'wg-mini-menu'
-root.document.body.appendChild miniNav
+navAppElement.appendChild miniNav
 
-app.run ->
-  console.log element
+angular.bootstrap navAppElement, ["navApp"]
