@@ -32,7 +32,7 @@
     function() {
       return {
         restrict: 'AEC',
-        templateUrl: "./templates/wgMainMenu.html",
+        templateUrl: "/templates/wgMainMenu.html",
         replace: true,
         link: function(scope, element, attrs) {
           return scope.menuConfig = root.wgMenuConfig;
