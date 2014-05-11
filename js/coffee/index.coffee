@@ -10,6 +10,3 @@ app.directive 'wgMainMenu', [
     link: (scope, element, attrs) ->
       scope.menuConfig = root.wgMenuConfig
 ]
-
-
-angular.bootstrap root.document.body, ["bodyApp"]

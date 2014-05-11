@@ -41,6 +41,4 @@
     }
   ]);
 
-  angular.bootstrap(root.document.body, ["bodyApp"]);
-
 }).call(this);
