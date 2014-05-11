@@ -1,6 +1,7 @@
 root = @
 
-app = angular.module 'navApp', []
+app = angular.module('navApp', []).run ->
+  console.log 'running'
 
 
 app.directive 'wgMiniMenu', [
@@ -29,4 +30,4 @@ miniNav.className = 'wg-mini-menu'
 root.document.body.appendChild miniNav
 
 app.run ->
-    console.log element
+  console.log element

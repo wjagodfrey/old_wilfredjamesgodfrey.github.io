@@ -26,7 +26,9 @@
 
   root = this;
 
-  app = angular.module('navApp', []);
+  app = angular.module('navApp', []).run(function() {
+    return console.log('running');
+  });
 
   app.directive('wgMiniMenu', [
     function() {
