@@ -26,7 +26,9 @@
 
   root = this;
 
-  app = angular.module('navApp', []).run([
+  app = angular.module('navApp', []);
+
+  app.run([
     '$rootElement', function(element) {
       return console.log(element);
     }

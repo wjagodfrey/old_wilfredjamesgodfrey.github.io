@@ -1,7 +1,7 @@
 root = @
 
 app = angular.module 'navApp', []
-.run [
+app.run [
   '$rootElement'
   (element) ->
     console.log element
