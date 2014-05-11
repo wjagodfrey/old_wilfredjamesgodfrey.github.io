@@ -21,15 +21,11 @@ app.directive 'wgMiniMenu', [
           description : 'Project index page'
         }
       ]
-
-      # (root.document.addEventListener or root.document.attachEvent) 'mouseup', ->
-      #   scope.showProjects = false
-      #   scope.showProject = false
-      # , false
 ]
 
-miniNav = document.createElement 'div'
-miniNav.className = 'wg-mini-menu'
-root.document.body.appendChild miniNav
+setTimeout ->
+  miniNav = document.createElement 'div'
+  miniNav.className = 'wg-mini-menu'
+  root.document.body.appendChild miniNav
 
-angular.bootstrap root.document, ["navApp"]
+  angular.bootstrap root.document, ["navApp"]
