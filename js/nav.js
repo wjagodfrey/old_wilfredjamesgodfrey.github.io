@@ -36,8 +36,7 @@
         replace: true,
         link: function(scope, element, attrs) {
           return scope.menuConfig = root.wgMenuConfig.reduce(function(acc, item, i) {
-            console.log(root.location.pathname, '/' + item.url);
-            if (root.location.pathname === '/' + item.url) {
+            if (root.location.pathname === '/' + item.url + '/') {
               scope.project = item;
             } else {
               acc.push(item);
