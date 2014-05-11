@@ -28,12 +28,6 @@
 
   app = angular.module('navApp', []);
 
-  app.run([
-    '$rootElement', function(element) {
-      return console.log(element);
-    }
-  ]);
-
   app.directive('wgMiniMenu', [
     function() {
       return {
@@ -65,5 +59,11 @@
   miniNav.className = 'wg-mini-menu';
 
   root.document.body.appendChild(miniNav);
+
+  console.log(app.run([
+    '$rootElement', function(element) {
+      return console.log(element);
+    }
+  ]));
 
 }).call(this);
