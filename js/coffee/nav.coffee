@@ -1,6 +1,11 @@
 root = @
 
 app = angular.module 'navApp', []
+.run [
+  '$rootElement'
+  (element) ->
+    console.log element
+]
 
 app.directive 'wgMiniMenu', [
   ->
@@ -23,7 +28,6 @@ app.directive 'wgMiniMenu', [
       ]
 ]
 
-setTimeout ->
-  miniNav = document.createElement 'div'
-  miniNav.className = 'wg-mini-menu'
-  root.document.body.appendChild miniNav
+miniNav = document.createElement 'div'
+miniNav.className = 'wg-mini-menu'
+root.document.body.appendChild miniNav
