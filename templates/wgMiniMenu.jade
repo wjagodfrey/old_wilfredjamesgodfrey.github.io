@@ -5,9 +5,9 @@
       div.list-item(ng-repeat="item in menuConfig")
         a(ng-href="/{{item.url}}" title="{{item.description}}")
           {{item.name}}
-  .menu(ng-class="{open:showProject}" ng-if="project")
-    .button(ng-click="showProject = !showProject; showProjects = false") {{project.name}}
-    .list(ng-show="showProject")
+  .menu(ng-class="{open:$parent.showProject}" ng-if="project")
+    .button(ng-click="$parent.showProject = !$parent.showProject; $parent.showProjects = false") {{project.name}}
+    .list(ng-show="$parent.showProject")
       .list-item
         div {{project.description}}
         em
