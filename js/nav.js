@@ -32,7 +32,7 @@
     function() {
       return {
         restrict: 'AEC',
-        templateUrl: "./templates/wgMiniMenu.html",
+        templateUrl: "/templates/wgMiniMenu.html",
         replace: true,
         link: function(scope, element, attrs) {
           return scope.menuConfig = root.wgMenuConfig.reduce(function(acc, item, i) {

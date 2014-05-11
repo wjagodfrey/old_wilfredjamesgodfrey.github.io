@@ -5,7 +5,7 @@ app = angular.module 'navApp', []
 app.directive 'wgMiniMenu', [
   ->
     restrict: 'AEC'
-    templateUrl: "./templates/wgMiniMenu.html"
+    templateUrl: "/templates/wgMiniMenu.html"
     replace: true
     link: (scope, element, attrs) ->
       scope.menuConfig = root.wgMenuConfig.reduce (acc, item, i) ->
