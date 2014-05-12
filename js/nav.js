@@ -29,14 +29,14 @@
   app = angular.module('navApp', []);
 
   app.directive('wgMiniMenu', [
-    function() {
+    '$timeout', function($timeout) {
       return {
         restrict: 'AEC',
         templateUrl: "/templates/wgMiniMenu.html",
         replace: true,
         link: function(scope, element, attrs) {
-          return scope.menuConfig = root.wgMenuConfig.reduce(function(acc, item, i) {
-            if (root.location.pathname === '/' + item.url + '/') {
+          scope.menuConfig = root.wgMenuConfig.reduce(function(acc, item, i) {
+            if (root.location.pathname === '/' + item.url + '/' || i === 0) {
               scope.project = item;
             } else {
               acc.push(item);
@@ -49,6 +49,14 @@
               description: 'Project index page'
             }
           ]);
+          return root.addEventListener('mouseup', function(e) {
+            if (!(element[0] !== e.target && element[0].contains(e.target))) {
+              return $timeout(function() {
+                scope.showProjects = false;
+                return scope.showProject = false;
+              });
+            }
+          });
         }
       };
     }

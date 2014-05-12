@@ -3,13 +3,14 @@ root = @
 app = angular.module('navApp', [])
 
 app.directive 'wgMiniMenu', [
-  ->
+  '$timeout'
+  ($timeout) ->
     restrict: 'AEC'
     templateUrl: "/templates/wgMiniMenu.html"
     replace: true
     link: (scope, element, attrs) ->
       scope.menuConfig = root.wgMenuConfig.reduce (acc, item, i) ->
-        if root.location.pathname is '/'+item.url+'/'
+        if root.location.pathname is '/'+item.url+'/' or i is 0
           scope.project = item
         else
           acc.push item
@@ -21,6 +22,11 @@ app.directive 'wgMiniMenu', [
           description : 'Project index page'
         }
       ]
+      root.addEventListener 'mouseup', (e) ->
+        if !(element[0] isnt e.target and element[0].contains(e.target))
+          $timeout ->
+            scope.showProjects = false
+            scope.showProject = false
 ]
 
 navAppElement = root.document.getElementById('wg-nav-app')
