@@ -10,7 +10,7 @@ app.directive 'wgMiniMenu', [
     replace: true
     link: (scope, element, attrs) ->
       scope.menuConfig = root.wgMenuConfig.reduce (acc, item, i) ->
-        if root.location.pathname is '/'+item.url+'/' or i is 0
+        if root.location.pathname is '/'+item.url+'/'
           scope.project = item
         else
           acc.push item
