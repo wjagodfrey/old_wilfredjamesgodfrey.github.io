@@ -7,6 +7,10 @@
   display: none !important;
 }
 .wg-mini-menu {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px !important;
+  line-height: 16px;
+  color: #333;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +19,7 @@
 }
 .wg-mini-menu .menu {
   display: inline-block;
-  color: #000;
+  color: #333;
   opacity: 0.3;
 }
 .wg-mini-menu .menu:hover {
@@ -51,6 +55,10 @@
 }
 .wg-mini-menu .menu .list .list-item:hover {
   background: rgba;
+}
+.wg-mini-menu .menu .list .list-item a {
+  color: #333;
+  text-decoration: none;
 }
 .wg-mini-menu .menu .list .list-item a:hover {
   text-decoration: none;

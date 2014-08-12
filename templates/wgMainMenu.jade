@@ -1,7 +1,10 @@
-.col-md-3.col-xs-6(ng-repeat="item in menuConfig").project
-  a(ng-href="./{{item.url}}").thumbnail
-    img(ng-src="./img/nav/{{item.img}}")
-  h4 {{item.name}}
-  div(ng-bind-html="item.description")
-  em
-    small(ng-bind-html="item.hint")
+span
+  .col-xs-12(ng-hide="loadingCount == 0")
+    .text-center Loading
+  .col-md-3.col-xs-6(ng-show="loadingCount == 0" ng-repeat="item in menuConfig").project
+    a(ng-href="./{{item.url}}").thumbnail
+      img(ng-src="./img/nav/{{item.img}}" on-load="$parent.loadingCount = $parent.loadingCount - 1")
+    h4 {{item.name}}
+    div(ng-bind-html="item.description")
+    em
+      small(ng-bind-html="item.hint")

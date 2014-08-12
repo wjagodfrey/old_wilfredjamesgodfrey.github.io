@@ -4,10 +4,16 @@
 
   this.wgMenuConfig = [
     {
+      name: 'Space Joust',
+      url: 'spaceJoust',
+      description: '*WIP* Multiplayer thumbwrestling(?) with lasers, in space.',
+      hint: '<strong>Alien:</strong> WSAD | <strong>Human:</strong> Arrow Keys<br/> Land on your opponent\s head for maximum damage.',
+      img: 'spaceJoust.png'
+    }, {
       name: 'Hector',
       url: 'hector',
       description: 'A 3Dish pixelart head, and some buttons. What do they do?',
-      hint: 'Play with the buttons, you\'ll figure it out.',
+      hint: 'Play with the buttons, you\'ll figure it out.<br/><small>Featuring a nearly infinite number of unique blinks!</small>',
       img: 'hector.png'
     }, {
       name: 'Sprite Breaker',
@@ -28,6 +34,24 @@
 
   app = angular.module('bodyApp', ['ngSanitize']);
 
+  app.directive('onLoad', [
+    function() {
+      return {
+        restrict: 'AEC',
+        scope: {
+          onLoad: '&'
+        },
+        link: function(scope, element, attrs) {
+          return element.on('load', function(e) {
+            return scope.$apply(function() {
+              return scope.onLoad();
+            });
+          });
+        }
+      };
+    }
+  ]);
+
   app.directive('wgMainMenu', [
     function() {
       return {
@@ -35,7 +59,8 @@
         templateUrl: "/templates/wgMainMenu.html",
         replace: true,
         link: function(scope, element, attrs) {
-          return scope.menuConfig = root.wgMenuConfig;
+          scope.menuConfig = root.wgMenuConfig;
+          return scope.loadingCount = scope.menuConfig.length;
         }
       };
     }

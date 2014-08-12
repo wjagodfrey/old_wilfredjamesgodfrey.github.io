@@ -1,6 +1,6 @@
 root = @
 
-app = angular.module('navApp', [])
+app = angular.module('navApp', ['ngSanitize'])
 
 app.directive 'wgMiniMenu', [
   '$timeout'

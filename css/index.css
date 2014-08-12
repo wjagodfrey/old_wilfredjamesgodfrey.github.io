@@ -9,6 +9,7 @@
 body {
   margin: 0;
   padding-bottom: 60px;
+  padding-top: 30px;
 }
 canvas {
   cursor: none;

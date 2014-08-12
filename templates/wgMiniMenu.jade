@@ -9,6 +9,6 @@
     .button(ng-click="$parent.showProject = !$parent.showProject; $parent.showProjects = false") {{project.name}}
     .list(ng-show="$parent.showProject")
       .list-item
-        div {{project.description}}
+        div(ng-bind-html="project.description")
         em
-          small {{project.hint}}
+          small(ng-bind-html="project.hint")
