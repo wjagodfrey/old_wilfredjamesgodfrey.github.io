@@ -8,7 +8,7 @@
 }
 body {
   margin: 0;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   padding-top: 30px;
 }
 canvas {
@@ -19,4 +19,25 @@ canvas {
 }
 .project {
   margin-bottom: 40px;
+  height: 400px;
+}
+@media screen and (min-width: 650px) {
+  .project {
+    height: 490px;
+  }
+}
+@media screen and (min-width: 650px) {
+  .project {
+    height: 490px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .project {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .project {
+    height: 400px;
+  }
 }
