@@ -4,7 +4,7 @@
     url         : 'spaceJoust'
     description : '*WIP* Multiplayer thumbwrestling(?) with lasers, in space.'
     hint        : '
-      <strong>Alien:</strong> WSAD | <strong>Human:</strong> Arrow Keys<br/>
+      <strong>Alien:</strong> WSAD & G | <strong>Human:</strong> Arrow Keys & /<br/>
       Land on your opponent\s head for maximum damage.
     '
     img         : 'spaceJoust.png'
